@@ -37,7 +37,7 @@ const LoginPage = () => {
           alt=""
         />
       </div>
-      <div className="bg-pink-100 h-full px-4 space-x-4 py-8">
+      <div className="bg-[rgba(226,52,40,.1)] h-full px-4 space-x-4 py-8">
         <h3 className="font-semibold text-center text-xl">
           Sign in to your account
         </h3>
@@ -61,7 +61,7 @@ const LoginPage = () => {
         <div className="text-sm text-gray-500">
           Dont't have an account?{" "}
           <span className="text-red-500">
-            <Link to="/dashboard">sign up</Link>
+            <Link to="/signup">sign up</Link>
           </span>
         </div>
       </div>

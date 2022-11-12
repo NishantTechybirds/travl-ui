@@ -25,8 +25,8 @@ const SignupPage = () => {
     console.log("signup completed now login");
   };
   return (
-    <div className="bg-pink-200 h-screen flex justify-center items-center px-4 sm:px-16 md:px-52 lg:px-64 py-6">
-      <div className="bg-white rounded-md space-y-4 w-full px-6  py-10">
+    <div className="bg-[rgba(226,52,40,.1)] h-screen flex justify-center items-center px-4 sm:px-24 py-6">
+      <div className="bg-white rounded-md space-y-4 max-w-screen-lg md:w-[450px] lg:w-[500px] w-full px-6  py-10">
         <div className="flex justify-center">
           <Logo></Logo>
         </div>
@@ -44,7 +44,7 @@ const SignupPage = () => {
                 id="username"
                 name="username"
                 required
-                placeholder="Username"
+                placeholder="username"
               >
                 Username
               </Input>
