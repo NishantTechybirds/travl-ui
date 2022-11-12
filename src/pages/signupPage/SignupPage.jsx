@@ -4,9 +4,9 @@ import { Form, Formik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
 import { object, string } from "yup";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import Logo from "../components/Logo";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
+import Logo from "../../components/Logo";
 
 const SignupPage = () => {
   const validationSchema = object().shape({

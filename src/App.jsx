@@ -3,9 +3,9 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
-import Dashboard from "./pages/Dashboard";
+import LoginPage from "./pages/loginPage/LoginPage";
+import SignupPage from "./pages/signupPage/SignupPage";
+import Dashboard from "./pages/dashboardPage/Dashboard";
 
 function App() {
   const [count, setCount] = useState(0);
