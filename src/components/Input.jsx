@@ -1,18 +1,25 @@
 /** @format */
 
+import { useField } from "formik";
 import React from "react";
 
-const Input = ({ id, children, placeholder }) => {
+const Input = ({ id, children, placeholder, type, name, ...rest }) => {
+  const field = useField(name);
   return (
     <div className="">
       <label className="text-gray-600 text-sm font-semibold" htmlFor={id}>
         {children}
       </label>
       <input
-        placeholder={placeholder}
-        className="block w-11/12 py-2 px-4 border focus:border-none focus:ring-red-500  border-gray-400 rounded-2xl"
+        onChange={field.onChange}
+        onBlur={field.onBlur}
+        value={field.value}
+        name={name}
         id={id}
-        type="text"
+        placeholder={placeholder}
+        className="block w-full py-2 border focus:border-none focus:ring-red-500  border-gray-400 rounded-2xl"
+        type={type || "text"}
+        {...rest}
       />
     </div>
   );
