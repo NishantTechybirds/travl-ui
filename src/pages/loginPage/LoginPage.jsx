@@ -5,7 +5,7 @@ import React from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Logo from "../../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const validationSchema = object().shape({
@@ -16,24 +16,26 @@ const LoginPage = () => {
     email: "",
     password: "",
   };
+  const navigate = useNavigate();
   const onSubmit = () => {
     console.log("login done, now navigating to dashboard");
+    navigate("/dashboard");
   };
   return (
-    <div className="lg:flex h-screen">
+    <div className="h-screen lg:flex">
       <div className=" lg:pt-40">
-        <div className="flex justify-center items-center pt-8 pb-6">
+        <div className="flex items-center justify-center pt-8 pb-6">
           <Logo></Logo>
         </div>
-        <div className="text-center space-y-4 mx-10 lg:mx-none">
-          <h3 className="font-semibold text-xl">Welcome back!</h3>
+        <div className="mx-10 space-y-4 text-center lg:mx-none">
+          <h3 className="text-xl font-semibold">Welcome back!</h3>
           <p className="text-sm text-gray-400">
             User Experience and Interface Design{" "}
             <span className="block">Stratsgy Saas Solutions</span>
           </p>
 
           <img
-            className="h-48 rounded-full mx-auto sm:h-60"
+            className="h-48 mx-auto rounded-full sm:h-60"
             src="https://cdn5.vectorstock.com/i/1000x1000/52/39/woman-and-man-couple-with-smartphone-to-travel-vector-22465239.jpg"
             alt=""
           />
@@ -41,7 +43,7 @@ const LoginPage = () => {
       </div>
       <div className="lg:flex-grow">
         <div className="bg-[rgba(226,52,40,.1)] lg:pt-40 h-full flex-col justify-center items-center px-4 space-x-4 py-8">
-          <h3 className="font-semibold text-center text-xl">
+          <h3 className="text-xl font-semibold text-center">
             Sign in to your account
           </h3>
           <div className="">

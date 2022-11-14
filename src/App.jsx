@@ -5,7 +5,7 @@ import logo from "./logo.svg";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/loginPage/LoginPage";
 import SignupPage from "./pages/signupPage/SignupPage";
-import Dashboard from "./pages/dashboardPage/Dashboard";
+import Dashboard from "./pages/dashboardPage/index/Dashboard";
 
 function App() {
   const [count, setCount] = useState(0);
